@@ -1,7 +1,7 @@
 export default function Header() {
     return (
         <header>
-            <nav className="flex justify-center">
+            <nav className="flex justify-center py-4">
                 <ul className="flex gap-4">
                     <li>Home</li>
                     <li>Consolas</li>
