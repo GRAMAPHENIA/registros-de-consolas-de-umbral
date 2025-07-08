@@ -16,7 +16,13 @@ export const TaskCardHeader = ({
   isExpanded,
   onToggle,
 }: TaskCardHeaderProps) => (
-  <div className="flex items-center justify-between">
+  <div 
+    className="flex items-center justify-between cursor-pointer"
+    onClick={onToggle}
+    role="button"
+    tabIndex={0}
+    onKeyDown={(e) => e.key === 'Enter' && onToggle()}
+  >
     <h3 className="text-lg font-mono font-medium">{task.titulo}</h3>
     <div className="flex items-center space-x-2">
       <span className="text-sm text-muted-foreground">Nivel {task.nivel}</span>

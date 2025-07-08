@@ -1,65 +1,80 @@
 // Ruta: /components/initial-screen/TaskItem.tsx
 // Importaciones de iconos locales
-interface IconProps extends React.HTMLAttributes<HTMLImageElement> {
+import Image from 'next/image';
+import { Task } from "@/types/task";
+
+interface IconProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
 
 const BookOpen = ({ className = "", ...props }: IconProps) => (
-  <img
-    src="/icons/book-open.svg"
-    alt="Libro abierto"
-    className={`w-4 h-4 ${className}`}
-    {...props}
-  />
+  <div className={`relative w-4 h-4 ${className}`} {...props}>
+    <Image
+      src="/icons/book-open.svg"
+      alt="Libro abierto"
+      fill
+      className="object-contain"
+    />
+  </div>
 );
 
 const Code = ({ className = "", ...props }: IconProps) => (
-  <img
-    src="/icons/code.svg"
-    alt="Código"
-    className={`w-4 h-4 ${className}`}
-    {...props}
-  />
+  <div className={`relative w-4 h-4 ${className}`} {...props}>
+    <Image
+      src="/icons/code.svg"
+      alt="Código"
+      fill
+      className="object-contain"
+    />
+  </div>
 );
 
 const AlertTriangle = ({ className = "", ...props }: IconProps) => (
-  <img
-    src="/icons/triangle-alert.svg"
-    alt="Alerta"
-    className={`w-4 h-4 ${className}`}
-    {...props}
-  />
+  <div className={`relative w-4 h-4 ${className}`} {...props}>
+    <Image
+      src="/icons/triangle-alert.svg"
+      alt="Alerta"
+      fill
+      className="object-contain"
+    />
+  </div>
 );
 
 const ChevronDown = ({ className = "", ...props }: IconProps) => (
-  <img
-    src="/icons/chevron-down.svg"
-    alt="Desplegar"
-    className={`w-4 h-4 ${className}`}
-    {...props}
-  />
+  <div className={`relative w-4 h-4 ${className}`} {...props}>
+    <Image
+      src="/icons/chevron-down.svg"
+      alt="Desplegar"
+      fill
+      className="object-contain"
+    />
+  </div>
 );
 
 const ChevronUp = ({ className = "", ...props }: IconProps) => (
-  <img
-    src="/icons/chevron-up.svg"
-    alt="Contraer"
-    className={`w-4 h-4 ${className}`}
-    {...props}
-  />
+  <div className={`relative w-4 h-4 ${className}`} {...props}>
+    <Image
+      src="/icons/chevron-up.svg"
+      alt="Contraer"
+      fill
+      className="object-contain"
+    />
+  </div>
 );
 
 const ArrowRight = ({ className = "", ...props }: IconProps) => (
-  <img
-    src="/icons/arrow-right.svg"
-    alt="Flecha derecha"
-    className={`w-4 h-4 transition-transform group-hover:translate-x-1 ${className}`}
-    {...props}
-  />
+  <div className={`relative w-4 h-4 ${className}`} {...props}>
+    <Image
+      src="/icons/arrow-right.svg"
+      alt="Flecha derecha"
+      fill
+      className="object-contain transition-transform group-hover:translate-x-1"
+    />
+  </div>
 );
 
 interface TaskItemProps {
-  task: any;
+  task: Task;
   index: number;
   isSelected: boolean;
   onToggle: () => void;
