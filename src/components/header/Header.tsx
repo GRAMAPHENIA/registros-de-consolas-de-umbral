@@ -3,7 +3,7 @@ export default function Header() {
         <header>
             <nav className="flex justify-center py-4">
                 <ul className="flex gap-4">
-                    <li>Home</li>
+                    <li>Inicio</li>
                     <li>Consolas</li>
                     <li>Consolas</li>
                 </ul>
